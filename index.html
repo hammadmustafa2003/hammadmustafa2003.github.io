@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="menu.css">
+  <link rel="stylesheet" type="text/css" href="timeline.css">
+  <script src="script.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+  <div class="background-container">
+    <img src="assets/images/background.gif" alt="Background GIF">
+  </div>
+
+  <header>
+    <h1 class="name">HAMMAD
+      <hr> <span class="name-secondary">Mustafa</span>
+    </h1>
+    <nav class="menu">
+      <div class="side-menu-button" onclick="toggleMenu(this)">
+        <svg width="100" height="100" viewBox="0 0 200 200">
+          <g stroke-width="6.5" stroke-linecap="round">
+            <path d="M72 82.286h28.75" fill="#009100" fill-rule="evenodd" stroke="#00ff00" />
+            <path
+              d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
+              fill="none" stroke="#00ff00" />
+            <path d="M72 125.143h28.75" fill="#009100" fill-rule="evenodd" stroke="#00ff00" />
+            <path
+              d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
+              fill="none" stroke="#00ff00" />
+            <path d="M100.75 82.286h28.75" fill="#009100" fill-rule="evenodd" stroke="#00ff00" />
+            <path d="M100.75 125.143h28.75" fill="#009100" fill-rule="evenodd" stroke="#00ff00" />
+          </g>
+        </svg>
+      </div>
+    </nav>
+  </header>
+
+  <section id="section1" class="section intro container">
+    <div class="subsection justify-content-center">
+      <div class="name-section name-and-description">
+        <div class="name-intro">MUHAMMAD</div>
+        <div class="name-intro">HAMMAD</div>
+        <div class="name-intro">MUSTAFA</div>
+      </div>
+      <div id="personal-description" class="description">
+        <h2 class="section-heading">WHO AM I?</h2>
+        <p class="description-text">
+          I am a dedicated individual having a strong passion for learning and am currently seeking an opportunity to
+          contribute my skills to an organization with a positive and supportive environment. I am eager to develop my
+          abilities, achieve excellence, and demonstrate my potential.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="section2" class="section education container">
+    <div class="subsection-vertical justify-content-center">
+      <h2 class="section-heading">EDUCATION</h2>
+      <div class="education-cards">
+        <div class="show-other-card left-arrow" onclick="showOtherCard(-1)">❮</div>
+        <div class="education-card" id="bachelors-card">
+          <h3 class="education-heading">Bachelors in Computer Science</h3>
+          <p class="education-subheading">FAST NUCES, Lahore</p>
+          <p class="education-details">Scored 3.65/4 CGPA (till 6th semester)</p>
+        </div>
+        <div class="education-card" id="intermediate-card">
+          <h3 class="education-heading">Intermediate Pre-Engineering</h3>
+          <p class="education-subheading">GCU, Lahore</p>
+          <p class="education-details">Scored 93%</p>
+        </div>
+        <div class="education-card" id="matric-card">
+          <h3 class="education-heading">Matric Science Group</h3>
+          <p class="education-subheading">Govt. N.D. Islamia High School, Lahore</p>
+          <p class="education-details">Scored 97%</p>
+        </div>
+        <div class="show-other-card right-arrow" onclick="showOtherCard(1)">❯</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="section3" class="section  projects container">
+    <div class="subsection-vertical justify-content-center">
+      <div class="section-heading">PROJECTS</div>
+      <div class="project-cards">
+        <div class="show-other-card left-arrow" onclick="showOtherProject(-1)">❮</div>
+
+        <div class="project-card">
+          <img src='assets/images/parakeet.jpg' alt="parakeet" class="project-img">
+          <h3 class="project-name">Parekeet App</h3>
+          <p class="project-description">
+            A mobile application that allows users to learn English language through tutorials, quizzes and chat.
+          </p>
+
+          <button class="project-button"><a href="https://github.com/hammadmustafa2003/parakeet" target="_blank">View on GitHub</a></button>
+        </div>
+
+
+        <div class="project-card" style="display: none;">
+          <img src='assets/images/parakeet.jpg' alt="parakeet" class="project-img">
+          <h3 class="project-name">Hospital Management System</h3>
+          <p class="project-description">
+            A web application to automate all the working of hospital, from staff management, appointments to medicine.
+          </p>
+
+          <button class="project-button"><a href="https://github.com/hammadmustafa2003/Hospital-Manaagement-System" target="_blank">View on GitHub</a></button>
+        </div>
+
+
+        <div class="project-card" style="display: none;">
+          <img src='assets/images/restaurent_recommender.png' alt="restaurent_recommender" class="project-img">
+          <h3 class="project-name">Restaurent Recommender</h3>
+          <p class="project-description">
+            A chat bot that helps users discover and recommend restaurants based on their preferences.
+          </p>
+
+          <button class="project-button"><a href="https://github.com/hammadmustafa2003/Restaurent_Recommender" target="_blank">View on GitHub</a></button>
+        </div>
+
+
+        <div class="show-other-card right-arrow" onclick="showOtherProject(1)">❯</div>
+
+      </div>
+      <div class="circle-container"></div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- Side menu content here (outside the header) -->
+  <div id="side-menu" class="side-menu">
+    <div><a href="#" onclick="scrollToSection('section1')">Who am I?</a></div>
+    <div><a href="#" onclick="scrollToSection('section2')">Education</a></div>
+    <div><a href="#" onclick="scrollToSection('section3')">Projects</a></div>
+  </div>
+</body>
+
+</html>

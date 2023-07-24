@@ -1,0 +1,466 @@
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.slide-right {
+    animation: slideRight 0.5s forwards;
+}
+
+.slide-left {
+    animation: slideLeft 0.5s forwards;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-size: cover;
+    background-color: black;
+    margin-right: 0rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 14.5vh;
+}
+
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(15px);
+}
+
+.background-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.name-secondary {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.name h1 {
+    color: #00ff00;
+    margin: 0;
+    font-size: 24px;
+}
+
+.name hr {
+    border: none;
+    border-top: 2px solid #00ff00;
+    width: 130px;
+    margin: 5px 0;
+}
+
+.name h2 {
+    color: white;
+    margin: 0;
+}
+
+
+.side-menu {
+    /* display: None; */
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    padding: 20px;
+    top: 0px;
+    right: 0px;
+    width: 20rem;
+    height: 100%;
+    background-color: rgba(0, 65, 0, 0.5);
+    transform: translateX(20rem);
+    transition: transform 0.3s ease-in-out;
+    margin-top: 15vh;
+}
+
+.side-menu div {
+    margin-top: 20px;
+}
+
+.side-menu.active {
+    transform: translateX(0rem);
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.side-menu li {
+    margin-bottom: 10px;
+}
+
+.side-menu a {
+    text-decoration: none;
+    font-size: x-large;
+    color: #ffffff;
+    padding-bottom: 5px;
+}
+
+.side-menu a:hover {
+    position: relative;
+    z-index: 1;
+}
+
+.side-menu a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s;
+    transform: translateX(-50%);
+}
+
+.side-menu a:hover::before {
+    width: 100%;
+}
+
+
+.intro {
+    color: white;
+    text-align: left;
+    margin-top: 20%;
+    margin-bottom: auto;
+}
+
+.intro-content {
+    font-size: xx-large;
+    opacity: 0;
+    animation: fade-in 1s forwards;
+}
+
+.subsection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.subsection-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+
+
+.name-section {
+    display: flex;
+    flex-direction: column;
+    font-size: 72px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (min-width: 769px) {
+    .subsection {
+        flex-direction: row;
+    }
+
+    .name-section {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .name-intro {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 5vb;
+    }
+
+
+    .section-heading {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: left;
+        color: #00ff00;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .description-text {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 24px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+
+    .education {
+        margin-top: 13%;
+        text-align: center;
+    }
+
+    .education-cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .education-card {
+        color: #ffffff;
+        padding: 15%;
+        margin: 30px;
+        border-radius: 50%;
+        width: 50vb;
+        height: 50vh;
+        max-width: 90%;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    #bachelors-card {
+        background: linear-gradient(to bottom, rgba(0, 255, 0, 0.50), #0000);
+    }
+
+    #intermediate-card {
+        display: none;
+        background: linear-gradient(to bottom, rgba(255, 0, 0, 0.502), #0000);
+    }
+
+    #matric-card {
+        display: none;
+        background: linear-gradient(to bottom, rgba(0, 0, 255, 0.502), #0000);
+    }
+
+    .education-card.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .show-other-card {
+        background-color: transparent;
+        height: 30%;
+        color: rgb(0, 255, 0, 0.5);
+        font-size: 60px;
+        padding: 10px 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    .show-other-card:hover {
+        color: rgb(0, 255, 0, 1);
+    }
+
+    .left-arrow {
+        left: 20px;
+    }
+
+    .right-arrow {
+        right: 20px;
+    }
+
+
+    .education-heading {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 36px;
+        text-align: center;
+        color: #ffffff;
+        border-bottom: #ffffff 3px solid;
+        padding-bottom: 4px;
+    }
+
+    .projects {
+        margin-top: 13%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .name-intro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 46px;
+    }
+
+
+    .subsection {
+        padding-top: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
+    }
+
+    .name-section {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .description {
+        font-size:medium;
+        margin-top: 50%;
+    }
+
+    .section-heading {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: left;
+        color: #00ff00;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+    }
+
+    .description-text {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 24px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+
+    .education {
+        margin-top: 13%;
+        text-align: center;
+    }
+
+    .education-cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .education-card {
+        color: #ffffff;
+        padding: 10%;
+        margin: 30px;
+        border-radius: 10%;
+        width: 30vb;
+        height: 30vh;
+        max-width: 90%;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .education-card h3{
+        font-size: large;
+    }
+
+    #bachelors-card {
+        background: linear-gradient(to bottom, rgba(0, 255, 0, 0.50), #0000);
+    }
+
+    #intermediate-card {
+        display: none;
+        background: linear-gradient(to bottom, #ff00004d, #0000004d);
+    }
+
+    #matric-card {
+        display: none;
+        background: linear-gradient(to bottom, #0000ff4d, #0000004d);
+    }
+
+    .education-card.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .show-other-card {
+        background-color: transparent;
+        height: 30%;
+        color: rgb(0, 255, 0, 0.5);
+        font-size: x-large;
+        padding: 10px 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    .show-other-card:hover {
+        color: rgb(0, 255, 0, 1);
+    }
+
+    .left-arrow {
+        left: 20px;
+    }
+
+    .right-arrow {
+        right: 20px;
+    }
+
+
+    .education-heading {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 36px;
+        text-align: center;
+        color: #ffffff;
+        border-bottom: #ffffff 3px solid;
+        padding-bottom: 4px;
+    }
+
+    .projects {
+        margin-top: 13%;
+        text-align: center;
+    }
+}
