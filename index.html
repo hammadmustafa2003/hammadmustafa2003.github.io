@@ -2,15 +2,18 @@
 <html>
 
 <head>
-  <title>My Website</title>
+  <title>Hammad Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/582c1bbd7a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" type="text/css" href="menu.css">
   <link rel="stylesheet" type="text/css" href="timeline.css">
+  <link rel="stylesheet" type="text/css" href="contact.css">
   <script src="script.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 
 <body>
@@ -19,12 +22,20 @@
   </div>
 
   <header>
-    <h1 class="name">HAMMAD
-      <hr> <span class="name-secondary">Mustafa</span>
-    </h1>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/m-hammad-mustafa" target="_blank" class=" btn-1 social-link"><i
+          class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/hammadmustafa2003" target="_blank" class=" btn-2 social-link"><i
+          class="fa-brands fa-github"></i></a>
+      <a href="https://www.instagram.com/muhammad.hammad.mustafa/" target="_blank" class=" btn-3 social-link"><i
+          class="fa-brands fa-instagram"></i></a>
+    </div>
+
+    <h1 class="name">HAMMAD MUSTAFA</h1>
+
     <nav class="menu">
       <div class="side-menu-button" onclick="toggleMenu(this)">
-        <svg width="100" height="100" viewBox="0 0 200 200">
+        <svg width="60" height="60" viewBox="0 0 200 200">
           <g stroke-width="6.5" stroke-linecap="round">
             <path d="M72 82.286h28.75" fill="#009100" fill-rule="evenodd" stroke="#00ff00" />
             <path
@@ -99,19 +110,29 @@
           <p class="project-description">
             A mobile application that allows users to learn English language through tutorials, quizzes and chat.
           </p>
-
-          <button class="project-button"><a href="https://github.com/hammadmustafa2003/parakeet" target="_blank">View on GitHub</a></button>
+          <div>
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">Firebase</span>
+            <span class="project-tag">Dart</span>
+          </div>
+          <button class="project-button"><a href="https://github.com/hammadmustafa2003/parakeet" target="_blank">View on
+              GitHub</a></button>
         </div>
 
 
         <div class="project-card" style="display: none;">
-          <img src='assets/images/parakeet.jpg' alt="parakeet" class="project-img">
+          <img src='assets/images/hms.png' alt="parakeet" class="project-img">
           <h3 class="project-name">Hospital Management System</h3>
           <p class="project-description">
             A web application to automate all the working of hospital, from staff management, appointments to medicine.
           </p>
-
-          <button class="project-button"><a href="https://github.com/hammadmustafa2003/Hospital-Manaagement-System" target="_blank">View on GitHub</a></button>
+          <div>
+            <span class="project-tag">ASP.NET</span>
+            <span class="project-tag">T-SQL</span>
+            <span class="project-tag">C#</span>
+          </div>
+          <button class="project-button"><a href="https://github.com/hammadmustafa2003/Hospital-Manaagement-System"
+              target="_blank">View on GitHub</a></button>
         </div>
 
 
@@ -121,8 +142,28 @@
           <p class="project-description">
             A chat bot that helps users discover and recommend restaurants based on their preferences.
           </p>
+          <div>
+            <span class="project-tag">AI/ML</span>
+            <span class="project-tag">NLP</span>
+            <span class="project-tag">API</span>
+            <span class="project-tag">HTML/CSS</span>
+          </div>
+          <button class="project-button"><a href="https://github.com/hammadmustafa2003/Restaurent_Recommender"
+              target="_blank">View on GitHub</a></button>
+        </div>
 
-          <button class="project-button"><a href="https://github.com/hammadmustafa2003/Restaurent_Recommender" target="_blank">View on GitHub</a></button>
+        <div class="project-card" style="display: none;">
+          <img src='assets/images/house_price.png' alt="restaurent_recommender" class="project-img">
+          <h3 class="project-name">House price prediction</h3>
+          <p class="project-description">This project predicts the prices of houses using realtime data from zameen.com
+          </p>
+          <div>
+            <span class="project-tag">AI/ML</span>
+            <span class="project-tag">API</span>
+            <span class="project-tag">PHP</span>
+          </div>
+          <button class="project-button"><a href="https://github.com/hammadmustafa2003/House-Price-Prediction"
+              target="_blank">View on GitHub</a></button>
         </div>
 
 
@@ -134,14 +175,32 @@
     </div>
   </section>
 
+  <section id="section4" class="section contact container">
+    <div class="subsection-vertical justify-content-center">
+      <h2 class="section-heading">CONTACT</h2>
+      <form id="contactForm" onsubmit="composeEmail(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+
+    </div>
+  </section>
 
 
 
   <!-- Side menu content here (outside the header) -->
   <div id="side-menu" class="side-menu">
-    <div><a href="#" onclick="scrollToSection('section1')">Who am I?</a></div>
-    <div><a href="#" onclick="scrollToSection('section2')">Education</a></div>
-    <div><a href="#" onclick="scrollToSection('section3')">Projects</a></div>
+    <div class="jumbotron jumbotron-fluid side-menu-item"><i class="fa-solid fa-circle-info"></i><a href="#"
+        onclick="scrollToSection('section1')">About me</a></div>
+    <div class="jumbotron jumbotron-fluid side-menu-item"><i class="fa-solid fa-scroll"></i><a href="#"
+        onclick="scrollToSection('section2')"></i>Education</a></div>
+    <div class="jumbotron jumbotron-fluid side-menu-item"><i class="fa-solid fa-file-code"></i><a href="#"
+        onclick="scrollToSection('section3')">Projects</a></div>
+    <div class="jumbotron jumbotron-fluid side-menu-item"><i class="fa-solid fa-address-book"></i><a href="#"
+        onclick="scrollToSection('section4')">Contact</a></div>
   </div>
 </body>
 

@@ -1,0 +1,115 @@
+#section4 {
+    background-color: transparent;
+    padding: 40px 0;
+    margin-top: 15vh;
+}
+
+.contact form {
+    width: 60vb;
+    margin: 0 auto;
+}
+
+.contact form label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact form button {
+    display: block;
+    background-color: #218838;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-1 {
+    background-color: red;
+    color: white !important;
+}
+
+.btn-2 {
+    background-color: yellow;
+    color: black !important;
+}
+
+.btn-3 {
+    background-color: green;
+    color: white !important;
+}
+
+/* Additional styles for responsive design */
+@media (min-width:768px){
+    .social-link{
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        font-size: 12px;
+    }
+
+    .social-link i {
+        display: none;
+    }
+    
+    .social-link:hover {
+        transform: scale(1.5);
+    }
+    
+    .social-link:hover i {
+        display: inline-block;
+    }
+}
+@media (max-width: 768px) {
+    .social-link{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .contact form {
+        padding: 0 20px;
+    }
+
+    .social-links {
+        text-align: center;
+    }
+    
+}

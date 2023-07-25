@@ -26,7 +26,14 @@
     animation: slideLeft 0.5s forwards;
 }
 
-
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 
 body {
@@ -40,18 +47,21 @@ body {
 
 header {
     position: fixed;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
-    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.8);
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    margin: 10px;
+    background: rgb(50, 50, 50);
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 10px 10px 10px 10px;
     color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    width: 100%;
-    height: 14.5vh;
+    height: 7vh;
+    z-index: 999;
 }
 
 
@@ -104,67 +114,78 @@ header {
 }
 
 
-.side-menu {
-    /* display: None; */
-    display: flex;
+#side-menu {
     position: fixed;
+    top: 11%;
+    right: 1%;
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
     flex-direction: column;
-    padding: 20px;
-    top: 0px;
-    right: 0px;
-    width: 20rem;
-    height: 100%;
-    background-color: rgba(0, 65, 0, 0.5);
-    transform: translateX(20rem);
-    transition: transform 0.3s ease-in-out;
-    margin-top: 15vh;
+    align-items: center;
+    gap: 10px;
+    display: none;
+}
+#side-menu.active {
+    display: flex;
+    animation: fadeIn 0.2s ease-in;
 }
 
-.side-menu div {
-    margin-top: 20px;
-}
-
-.side-menu.active {
-    transform: translateX(0rem);
-}
-
-.side-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px;
-}
-
-.side-menu li {
-    margin-bottom: 10px;
-}
-
-.side-menu a {
+#side-menu a {
+    color: #000;
+    font-size: 18px;
     text-decoration: none;
-    font-size: x-large;
-    color: #ffffff;
-    padding-bottom: 5px;
-}
-
-.side-menu a:hover {
     position: relative;
-    z-index: 1;
+    margin-left: 10px;
+
+}
+.side-menu:hover a {
+    color: white ;
+}
+.side-menu-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+
+
+    padding: 5px 20px 5px 20px;
+    width:100%;
+    border-bottom:2px solid grey;
+
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.side-menu a::before {
+.side-menu-item:last-child {
+    border-bottom: 2px solid transparent;
+}
+
+.side-menu-item i{
+    font-size: large;
+    color: grey;
+}
+
+.side-menu-item:hover {
+    background-color: #024dbc;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+/* #side-menu a::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    top: -5px;
     left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: #fff;
-    transition: width 0.3s;
+    width: 30px;
+    height: 10px;
+    background-color: rgba(150, 150, 150, 0.7);
+    border-radius: 50%;
     transform: translateX(-50%);
-}
-
-.side-menu a:hover::before {
-    width: 100%;
-}
+  } */
 
 
 .intro {
@@ -329,7 +350,15 @@ header {
 
 @media (max-width: 768px) {
 
-    .name-intro{
+    .side-menu-button{
+        height: 80%;
+        width: 80%;
+    }
+    .name {
+        display: none;
+    }
+
+    .name-intro {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -352,7 +381,7 @@ header {
     }
 
     .description {
-        font-size:medium;
+        font-size: medium;
         margin-top: 50%;
     }
 
@@ -368,7 +397,7 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items:center;
+        align-items: center;
     }
 
     .description-text {
@@ -377,6 +406,7 @@ header {
         line-height: 1.6;
         text-align: left;
         margin-top: 20px;
+        /* margin-left: 20px; */
     }
 
 
@@ -401,7 +431,8 @@ header {
         max-width: 90%;
         transition: opacity 0.5s ease-in-out;
     }
-    .education-card h3{
+
+    .education-card h3 {
         font-size: large;
     }
 
@@ -429,11 +460,9 @@ header {
         height: 30%;
         color: rgb(0, 255, 0, 0.5);
         font-size: x-large;
-        padding: 10px 20px;
         border-radius: 50%;
         cursor: pointer;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-        z-index: 999;
     }
 
     .show-other-card:hover {
