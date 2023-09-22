@@ -228,6 +228,8 @@ header {
 @media (min-width: 769px) {
     .subsection {
         flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
     }
 
     .name-section {
@@ -368,10 +370,9 @@ header {
 
     .subsection {
         padding-top: 50%;
+        flex-wrap: wrap;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
+        align-content: center   ;
         align-self: center;
     }
 
@@ -492,4 +493,67 @@ header {
         margin-top: 13%;
         text-align: center;
     }
+}
+
+.section5headings{
+    color:#00ff00;
+    font-size: 20px;
+}
+
+.section5Content{
+    color:#ffffff;
+    font-size: 20px;
+}
+
+.section5Content:hover{
+    color:#00cc00;
+    font-size: 20px;
+}
+.about{
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+}
+
+.moving-skills{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillImg{
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.skillImg:hover{
+    scale: 1.3;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 500ms;
+}
+
+.profile-image{
+    border-radius: 5%; 
+    height: 350px;
+    width: 350px;
+    margin:50px;
+}
+
+.contact-submit{
+    background-color: #00ff00;
+    margin-top: 20px;
+}
+
+.contact-submit:hover{
+    scale:125%;
+    translate: 0px -10px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 300ms;
+}
+
+.moving-skill-marq{
+    width: 95vw;
 }
